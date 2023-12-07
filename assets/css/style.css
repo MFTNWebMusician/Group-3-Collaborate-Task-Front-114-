@@ -1,0 +1,304 @@
+*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: 'Montserrat', sans-serif;
+font-family: 'Raleway', sans-serif;
+/*transition: 1s;*/
+	}
+
+.darkMode{
+		background-color: black !important;
+		color: white !important;
+		transition: 0.5s;
+	}
+
+body{
+	background-color: white;
+}
+
+.circle-box{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+/*	border: 2px solid black;*/
+	overflow: hidden;
+	clip-path: circle(52.7% at 66% 0);
+	background-color: #95f5aa;
+}
+
+
+
+@keyframes rotate{
+	from{transform: rotate(0deg);}
+	to{transform: rotate(360deg);}
+	}
+
+.circle{
+/*	background-color: black;*/
+	margin: auto;
+	width: 699px;
+	height: 699px;
+	border: 2px solid red;
+	border-radius: 50%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;	
+/*	animation-name: rotate;*/
+	animation-duration: 20s;
+	animation-iteration-count: infinite;
+	z-index: 1;
+	position: absolute;
+	right: 110px;
+	top: 180px;
+	transition: 1s;
+	}
+
+.elements{
+	width: 120px;
+	height: 120px;
+/*	border: 2px solid blue;*/
+	border-radius: 50%;
+	margin: auto;
+	}
+
+.elements:hover{
+	transform: scale(1.5);
+	transition: 1s;
+}
+
+.element1{
+	margin-left: px;
+}
+
+.element2{
+
+	margin-top: -30px;			
+}
+
+.element4{
+
+	margin-left: -30px;	
+}
+
+.element5{
+	visibility: hidden;
+}
+
+.element6{
+
+	margin-right: -30px;			
+}
+
+.element8{
+
+	margin-bottom: -30px;
+}
+
+/*MAIN*/
+
+.main{
+	position: absolute;
+	z-index: -2;
+	width: 100%;
+	height: 100vh;			
+}
+
+.main-2{
+	width: 100%;
+	height: 100vh;
+	border: 2px solid black;
+}
+
+header{
+	position: absolute;
+	z-index: 2;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	padding: 0 50px;
+	height: 68px;
+	width: 100%;
+	/*			border: 2px solid black;*/
+	position: absolute;
+	}
+
+.head-nav{
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+/*  border: 2px solid green;*/
+}
+
+
+.head-nav2{
+	width: 20%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.darkmode_btn{
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	background-color: white;
+}
+
+nav{
+  width: 50%;
+}
+
+.nav-menu{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu li{
+  font-weight: bold;
+}
+
+.box-1{
+	position: absolute;
+ 	top: 200px;
+	left: 60px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+/*	border: 2px solid black;*/
+	width: 30%;
+	height:400px;
+}
+
+
+
+.box-1 h2,
+.box-1 p,
+.box-1 button{
+  margin: 10px 0;
+}
+
+.box-1 h2{
+  font-size: 50px;
+}
+
+.box-1 h2:first-child{
+  color: #95f5aa;
+}
+
+.box-1 button{
+  width: 40%;
+  height: 40px;
+  border: none;
+  border-radius: 40px;
+  background-color: #95f5aa;
+  color: white;
+  font-weight: bold;
+}
+
+
+.box-2{
+	position: absolute;
+	bottom: 60px;
+	right: 118px;
+  width: 50%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+/*  	border: 2px solid red;*/
+}
+
+.box-2 button{
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: #95f5aa;
+}
+
+
+
+
+.box-3{
+	position: absolute;
+	bottom: 5px;
+	right: 320px;
+	z-index: 10;
+	width: 250px;
+	height: 250px;
+/*	border: 2px solid black;*/
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	animation-name: firran;
+	animation-duration: 20s;
+	animation-iteration-count: infinite;
+}
+
+
+/*button:hover{
+  background-color: gray;
+  transition: 0.5s;
+}*/
+
+
+		
+
+
+@media(max-width: 768px){
+
+	.head-nav{
+		justify-content: space-around;
+		width: 60%;
+		margin-left:-20px;
+	}
+
+	.head-nav h1{
+		font-size: 25px;
+		margin-left:-10px	;
+	}
+
+	nav{
+/*		border: 2px solid black;*/
+  width: 50%;
+}
+
+	.circle{
+		width: 400px;
+		height: 400px;
+		top: 150px;
+		right: 68px;
+	}
+
+	.elements{
+		width: 90px;
+		height: 90px;
+	}
+
+	.box-1{
+	
+		left: 20px;
+		top: 99px;
+	}
+
+	.box-1 h2{
+  font-size: 30px;
+}
+
+	.box-3{
+		width: 180px;
+		height: 180px;
+		right: 175px;
+		bottom: 50px;
+	}
+
+	.box-2{
+		right: 80px;
+		
+	}
+}

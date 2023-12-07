@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<!-- fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Raleway:wght@300&display=swap" rel="stylesheet">
+	<!-- fonts -->
+
+
+	<script src="https://kit.fontawesome.com/b8c4a249a0.js" crossorigin="anonymous"></script>
+
+
+	<title>Project1</title>
+</head>
+<body>
+
+		<div class="main"></div>
+<!-- header -->
+		<header>
+			<div class="head-nav">
+				<h1>FoodSpin</h1>
+				<nav>
+					<ul class="nav-menu">
+						<li>Breakfast</li>
+						<li>Launch</li>
+						<li>Dinner</li>
+					</ul>
+				</nav>
+			</div>
+
+			<div class="head-nav2">
+				<a href="login.html">Login</a>
+				<a href="register.html">Register</a>
+				<h2>|</h2>
+				<a href=""><i class="fa-solid fa-bag-shopping fa-xl" style="color: #c2c2c2;"></i></a>
+				<button id="darkModeON" class="darkmode_btn dark-mode-toggle"><i class="fa-solid fa-moon fa-2xl" style="color: #000000;"></i></button>
+			</div>
+		</header>
+<!-- header -->
+
+<!-- main boxes-1 -->
+		<div class="box-1" >
+			<h2 id="product-info">$23</h2>
+			<h2 id="product-info">Asian Cucumber Salad</h2>
+			<p id="product-info">Asian Cucumber Salad Recipe made with crunchy cucumber, onion, rice wine vinegar, and a few secret ingredients!</p>
+			<button class="btns" id="order_btn">Order Now</button>
+		</div>
+
+		<div class="box-2">
+			<button class="btns" id="spin_minus"><i class="fa-solid fa-arrow-down fa-lg" style="color: #ffffff;"></i></button>
+			<button class="btns" id="spin_plus"><i class="fa-solid fa-arrow-down fa-lg" style="color: #ffffff;"></i></button>
+		</div>
+
+
+		<div class="box-3">
+			<img id="plate-box" src="assets/images/plate1.png" height="100%">
+		</div>
+<!-- main boxes-1 -->
+
+
+<!-- circle -->
+		<div class="circle-box">
+			<div class="circle" id="circle">
+				<img src="assets/images/plate1.png" id="plates" width="100%" class="elements element1"/>
+				<img src="assets/images/plate2.png" id="plates" width="100%"  class="elements element2"/>	
+				<img src="assets/images/plate3.png" id="plates" width="100%"  class="elements element3"/>	
+				<img src="assets/images/plate4.png" id="plates" width="100%"  class="elements element4"/>
+				<img src="" width="100%"  class="elements element5"/>
+				<img src="assets/images/plate6.png" id="plates" width="100%"  class="elements element6"/>
+				<img src="assets/images/plate7.png" id="plates" width="100%"  class="elements element7"/>
+				<img src="assets/images/plate8.png" id="plates" width="100%"  class="elements element8"/>
+				<img src="assets/images/plate9.png" id="plates" width="100%"  class="elements element9"/>
+			</div>
+		</div>
+<!-- circle -->
+		<div class="main-2"></div>
+
+
+<script src="assets/js/script.js"></script>
+
+
+
+<!-- 
+	<script>
+			
+		let plates=document.querySelectorAll('#plates');
+		let infos=document.querySelectorAll('#product-info');
+
+		
+		console.log(plates)
+
+		const food_infos=[
+			{
+				price: "23$",
+				name:"Asian Cucumber Salad",
+				info:"Asian Cucumber Salad Recipe made with crunchy cucumber, onion, rice wine vinegar, and a few secret ingredients!",
+				theme_color: "#95f5aa",
+				src: "assets/images/plate1.png"
+			},
+			{
+				price: "42$",
+				name: "Buffalo Style Chicken Egg Rolls",
+				info:" Stuffed with chicken, pepperoni,black beans, and smoked gouda served with a blend of hot ",
+				theme_color: "#f59595",
+				src: "assets/images/plate2.png"
+			},
+			{
+				price: "12$",
+				name: "Grilled Shrimp",
+				info:" Six shrimp in a chipotle marinade served with chipotle aioli  ",
+				theme_color: "#9597f5",
+				src: "assets/images/plate3.png"
+			},
+			{
+				price: "22$",
+				name: "Chicken Wings",
+				info:" Choice of hot, mild, BBQ, or teriyakisauce served with celery and your choice of bleu cheese or Ranch dressing ",
+				theme_color: "#b895f5",
+				src: "assets/images/plate4.png"
+			},
+			{
+				price: "42$",
+				name: "Pepperjack Cheese Bites",
+				info:"Lightly breaded pepperjack cheese served with Ranch dressing ",
+				theme_color: "#23403d",
+				src: "assets/images/plate6.png"
+			},
+			{
+				price: "44$",
+				name: "Hot Pretzel Sticks",
+				info:" Six fresh made pretzel sticks served with house made dijon cheese dip",
+				theme_color: "#c8f595",
+				src: "assets/images/plate7.png"
+			},
+			{
+				price: "46$",
+				name: "Caesar Salad",
+				info:"Romaine lettuce, aged parmigianoreggiano, house made Caesar dressing, and crouton",
+				theme_color: "#95e5f5",
+				src: "assets/images/plate8.png"
+			},
+			{
+				price: "25$",
+				name: "House Salad",
+				info:"Mixed greens, red onions, sunflowerseeds, tomatoes, mozzarella cheese,house made balsamic vinaigrette",
+				theme_color: "#618f72",
+				src: "assets/images/plate9.png"
+			}
+
+			];
+
+
+		function show_AsianCucumberSalad(){
+			let plates=document.querySelectorAll('img');
+			let infos=document.querySelectorAll('#product-info');
+			let circle_box=document.querySelector('.circle-box');
+			let plate_box=document.querySelector('#plate-box');
+
+			infos[0].style.color=food_infos[0].theme_color
+			infos[0].innerHTML=food_infos[0].price;
+		 	infos[1].innerHTML=food_infos[0].name;
+		 	infos[2].innerHTML=food_infos[0].info;
+
+		 	plate_box.setAttribute('src',food_infos[0].src);
+		 	circle_box.style.backgroundColor=food_infos[0].theme_color;
+		};
+
+		function show_BuffaloStyleChickenEggRolls(){
+			let plates=document.querySelectorAll('img');
+			let infos=document.querySelectorAll('#product-info');
+			let circle_box=document.querySelector('.circle-box');
+			let plate_box=document.querySelector('#plate-box');
+
+			infos[0].style.color=food_infos[1].theme_color
+			infos[0].innerHTML=food_infos[1].price;
+		 	infos[1].innerHTML=food_infos[1].name;
+		 	infos[2].innerHTML=food_infos[1].info;
+
+		 	plate_box.setAttribute('src',food_infos[1].src);
+		 	circle_box.style.backgroundColor=food_infos[1].theme_color;
+		};
+
+		function show_GrilledShrimp(){
+			let plates=document.querySelectorAll('img');
+			let infos=document.querySelectorAll('#product-info');
+			let circle_box=document.querySelector('.circle-box');
+			let plate_box=document.querySelector('#plate-box');
+
+			infos[0].style.color=food_infos[2].theme_color
+			infos[0].innerHTML=food_infos[2].price;
+		 	infos[1].innerHTML=food_infos[2].name;
+		 	infos[2].innerHTML=food_infos[2].info;
+    		
+    		plate_box.setAttribute('src',food_infos[2].src);
+		 	circle_box.style.backgroundColor=food_infos[2].theme_color;
+		};
+
+
+		function show_ChickenWings (){
+			let plates=document.querySelectorAll('img');
+			let infos=document.querySelectorAll('#product-info');
+			let circle_box=document.querySelector('.circle-box');
+			let plate_box=document.querySelector('#plate-box');
+
+			infos[0].style.color=food_infos[3].theme_color
+			infos[0].innerHTML=food_infos[3].price;
+		 	infos[1].innerHTML=food_infos[3].name;
+		 	infos[2].innerHTML=food_infos[3].info;
+    		
+    		plate_box.setAttribute('src',food_infos[3].src);
+		 	circle_box.style.backgroundColor=food_infos[3].theme_color;
+		};
+
+
+		function show_PepperjackCheeseBites(){
+			let plates=document.querySelectorAll('img');
+			let infos=document.querySelectorAll('#product-info');
+			let circle_box=document.querySelector('.circle-box');
+			let plate_box=document.querySelector('#plate-box');
+
+			infos[0].style.color=food_infos[4].theme_color;
+			infos[0].innerHTML=food_infos[4].price;
+		 	infos[1].innerHTML=food_infos[4].name;
+		 	infos[2].innerHTML=food_infos[4].info;
+    		
+    		plate_box.setAttribute('src',food_infos[4].src);
+		 	circle_box.style.backgroundColor=food_infos[4].theme_color;
+		};
+
+
+		function show_HotPretzelSticks (){
+			let plates=document.querySelectorAll('img');
+			let infos=document.querySelectorAll('#product-info');
+			let circle_box=document.querySelector('.circle-box');
+			let plate_box=document.querySelector('#plate-box');
+
+			infos[0].style.color=food_infos[5].theme_color;
+			infos[0].innerHTML=food_infos[5].price;
+		 	infos[1].innerHTML=food_infos[5].name;
+		 	infos[2].innerHTML=food_infos[5].info;
+    		
+    		plate_box.setAttribute('src',food_infos[5].src);
+		 	circle_box.style.backgroundColor=food_infos[5].theme_color;
+		};
+
+		function show_CaesarSalad (){
+			let plates=document.querySelectorAll('img');
+			let infos=document.querySelectorAll('#product-info');
+			let circle_box=document.querySelector('.circle-box');
+			let plate_box=document.querySelector('#plate-box');
+
+			infos[0].style.color=food_infos[6].theme_color
+			infos[0].innerHTML=food_infos[6].price;
+		 	infos[1].innerHTML=food_infos[6].name;
+		 	infos[2].innerHTML=food_infos[6].info;
+    		
+    		plate_box.setAttribute('src',food_infos[6].src);
+		 	circle_box.style.backgroundColor=food_infos[6].theme_color;
+		};
+
+		function show_HouseSalad (){
+			let plates=document.querySelectorAll('img');
+			let infos=document.querySelectorAll('#product-info');
+			let circle_box=document.querySelector('.circle-box');
+			let plate_box=document.querySelector('#plate-box');
+
+			infos[0].style.color=food_infos[6].theme_color
+			infos[0].innerHTML=food_infos[7].price;
+		 	infos[1].innerHTML=food_infos[7].name;
+		 	infos[2].innerHTML=food_infos[7].info;
+    		
+    		plate_box.setAttribute('src',food_infos[7].src);
+		 	circle_box.style.backgroundColor=food_infos[7].theme_color;
+		};
+
+		
+
+		plates[0].addEventListener('click', show_AsianCucumberSalad);
+		plates[1].addEventListener('click', show_BuffaloStyleChickenEggRolls);
+		plates[2].addEventListener('click', show_GrilledShrimp);
+		plates[3].addEventListener('click', show_ChickenWings);
+		plates[4].addEventListener('click', show_PepperjackCheeseBites);
+		plates[5].addEventListener('click', show_HotPretzelSticks);
+		plates[6].addEventListener('click', show_CaesarSalad);
+		plates[7].addEventListener('click', show_HouseSalad);
+
+
+
+	
+
+	</script>
+ -->
+</body>
+</html>
